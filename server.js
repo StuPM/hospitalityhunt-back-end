@@ -6,11 +6,7 @@ const helmet = require("helmet");
 
 app.use(helmet());
 
-const cors = require("cors");
-var corsOptions = {
-  origin: `https://hospitalityhunt-production.up.railway.app/`,
-};
-app.use(cors(corsOptions));
+app.use(cors());
 
 //it provides access to the body of the request, turns body into an object
 app.use(express.json());
